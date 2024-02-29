@@ -14,13 +14,13 @@ library(tidyverse)
 
 #### Download data ####
 
-NASA_APOD_20190719 <-
-  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-07-19")
+NASA <- 
+  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2024-02-28")
 
-# APOD July 19, 2019
-content(NASA_APOD_20190719)$date
+content(NASA)
 
-content(NASA_APOD_20190719)$explanation
+content(NASA)$explanation
 
+knitr::include_graphics(content(NASA)$url)
 
          
